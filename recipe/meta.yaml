@@ -1,5 +1,5 @@
 {% set name = "gcn-kafka" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc9c709a7ce518e4696bcffe9377181b29c11954bcd1d7abf1a496fbea0ceee9
+  sha256: bc29f33cafe88728b58ca9c7ef617c2f10001c18502950b3d6e3f668e4175c81
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://github.com/tachgsfc/gcn-kafka-python
-  summary: 'Official Python client for the General Coordinates Network (GCN)'
+  summary: Official Python client for the General Coordinates Network (GCN)
   description: |
     This is the official Python client for the General Coordinates Network (GCN).
     It is a very lightweight wrapper around confluent-kafka-python.
