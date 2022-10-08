@@ -1,5 +1,5 @@
 {% set name = "gcn-kafka" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 44747bdb0e25362887d9e421f63480c6701a9b6e0a3b3019a799cd905607d308
+  sha256: 1538a457d688e1cfce66ac4b7a716204b02b11c851224291a9e120ccabf867ed
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
