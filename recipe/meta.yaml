@@ -27,7 +27,7 @@ requirements:
     - python-confluent-kafka >=1.6.1, !=2.1.0
     - requests
     - python >=3.7
-    - typing_extensions
+    - typing_extensions # [py37]
 
 test:
   imports:
