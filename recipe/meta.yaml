@@ -24,7 +24,7 @@ requirements:
   run:
     - authlib
     - certifi
-    - python-confluent-kafka >=1.6.1
+    - python-confluent-kafka >=1.6.1, !=2.1.0, !=2.1.1
     - requests
     - python >=3.7
     - typing_extensions
