@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9a0a165fa6446676d7d785c46b1a0bb6097dffd19d7975fcbc4e58098522d60a
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
   noarch: python
 
 requirements:
@@ -19,14 +19,14 @@ requirements:
     - setuptools >=45
     - setuptools_scm >=6.2
     - wheel
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
     - authlib
     - certifi
     - python-confluent-kafka >=2.2.0
     - requests
-    - python >=3.7
+    - python >={{ python_min }}
     - typing_extensions
 
 test:
@@ -34,6 +34,7 @@ test:
     - gcn_kafka
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
