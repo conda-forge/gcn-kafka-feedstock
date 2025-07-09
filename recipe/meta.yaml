@@ -22,12 +22,9 @@ requirements:
     - python {{ python_min }}
     - pip
   run:
-    - authlib
     - certifi
-    - python-confluent-kafka >=2.2.0
-    - requests
+    - python-confluent-kafka >=2.11.0
     - python >={{ python_min }}
-    - typing_extensions
 
 test:
   imports:
